@@ -17,7 +17,7 @@ domainlist = open("domainlist.txt", 'r').readlines()
 def deployList():
     # Deploy the list to hosts file.
     with open('C:\\Windows\\System32\\drivers\\etc\\hosts', 'a') as hostsfile:
-        hostsfile.write('\n\n\n# Entries added by CleanScreen at {}\n\n\n'.format(date.today))
+        hostsfile.write('\n\n\n# Entries added by CleanScreen at {}\n\n\n'.format(date.today()))
         for domain in domainlist:
             print (domain)
             hostsfile.write('127.0.0.1 {}'.format(domain))
