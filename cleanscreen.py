@@ -26,25 +26,15 @@ def clearConsole():
     # Clear the console window
     os.system('cls')
 
-def clearDnsCache():
-    # Clear the DNS cache after deployment
-    print('Now clearing DNS Cache...')
-    pass
-    print('DNS Cache cleared')
-
-def reboot():
-    pass
-
 def finalMessage():
     count = 0
     while count < 15:
         count +=1 
-        print('DONE! Please close this window and reboot the computer.')
+        print('DONE!')
 
 #######################
 deployList()
-clearDnsCache()
-#clearConsole()
+clearConsole()
 finalMessage()
 #######################
 
