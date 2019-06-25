@@ -1,5 +1,4 @@
 # cleanscreen
-Block porn, malware or other unwanted sites. 
+Blokkèr uønskede sider. Vis en advarsel til de som besøker de blokkerte sidene. 
 
-NOTE: Run exe (or Python file) as administrator. 
-NOTE2: Does currently only work on Windows. 
+![Skjermbilde](img/screenshot.png)

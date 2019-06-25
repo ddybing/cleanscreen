@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>STOPP</title>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="15;http://www.google.no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+         body {
+    background: black;
+   
+}
+
+p, h1, h2  {
+    color:white;
+    font-family:Helvetica;
+    text-align:center;
+}
+
+h1 {
+    font-size:90px;
+    animation-name:flashStopSign;
+    animation-duration:1s;
+    animation-iteration-count:10;
+    animation-fill-mode:forwards;
+    animation-timing-function:ease;
+}
+
+p {
+    font-size:30px;
+}
+
+/* Animations */ 
+
+
+@keyframes flashStopSign {
+    0% {opacity: 1.0;}
+    50% {opacity: 0.0;}
+    100% {opacity: 1.0;}
+} 
+        </style>
+    </head>
+
+    <body>
+
+        <h1>STOPP!</h1>
+        <hr style="color:white;margin-top:-40px;">
+        <p>Du har forsøkt å besøke en blokkert side.</p>
+        <p>Omdirigerer til en åpen side</p>
+        <p id="countdown"></p>
+
+    </body>
+
+    <script>
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration;
+                window.location = ("http://www.google.no");
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var fiveMinutes = 60 * 5,
+                display = document.querySelector('#countdown');
+            startTimer(10, display);
+        };
+    </script>
+</html>
